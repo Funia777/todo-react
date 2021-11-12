@@ -1,0 +1,54 @@
+.list {
+  $self: &;
+  font-weight: 500;
+  margin-bottom: 10px;
+  margin-bottom: 30px;
+  &__bottomAdd {
+    opacity: 0.4;
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  li {
+    display: flex;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    cursor: pointer;
+    margin-bottom: 5px;
+
+    &:hover #{$self}__remove {
+      opacity: 0.3;
+    }
+    #{$self}__remove {
+      opacity: 0;
+      transition: opacity 0.15s ease-in-out;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+    span {
+      flex: 1;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+    &:hover {
+      background: rgba(255, 255, 255, 0.3);
+    }
+    &.active {
+      transition: 0.1s ease-in-out;
+      background-color: white;
+      border-radius: 5px;
+    }
+    i {
+      display: flex;
+      align-items: center;
+      margin-right: 9px;
+    }
+  }
+  .circle {
+    margin-left: 8px;
+  }
+}

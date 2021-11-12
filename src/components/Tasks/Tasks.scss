@@ -1,0 +1,148 @@
+.tasks {
+  a {
+    text-decoration: none;
+    display: flex;
+    flex: auto;
+  }
+  &__form {
+    margin-top: 20px;
+    &-block {
+      button {
+        margin-right: 10px;
+        margin-top: 15px;
+      }
+    }
+    &-new {
+      opacity: 0.4;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      transition: opacity 0.1s ease-in-out;
+      &:hover {
+        opacity: 0.8;
+      }
+      img {
+        margin-right: 15px;
+      }
+    }
+  }
+  &:hover {
+    img {
+      opacity: 0.2;
+    }
+  }
+  flex: 1;
+  padding-bottom: 20px;
+  border-bottom: 1px solid#F2F2F2;
+  &__items {
+    h2 {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      text-align: center;
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 20px;
+      color: #c9d1d3;
+    }
+  }
+  &__title {
+    display: flex;
+    align-items: center;
+    flex: auto;
+    white-space: nowrap;
+    width: 178px;
+    height: 39px;
+    font-family: Montserrat;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 39px;
+    color: #64c4ed;
+    img {
+      opacity: 0;
+      margin-left: 14px;
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+  &__items-row {
+    $self: &;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    label {
+      margin-right: 15px;
+    }
+    p {
+      margin-right: 15px;
+      font-family: Roboto;
+      font-weight: 500;
+    }
+    img {
+      display: flex;
+      align-items: center;
+      margin-right: 15px;
+    }
+    &:hover #{$self}-remove {
+      opacity: 0.4;
+    }
+    #{$self}-remove {
+      opacity: 0;
+      &:hover {
+        opacity: 0.8;
+        background-color: darken(#f4f6f8, 10%);
+      }
+    }
+    &:hover #{$self}-edit {
+      opacity: 0.4;
+    }
+    #{$self}-edit {
+      opacity: 0;
+      &:hover {
+        opacity: 0.8;
+        background-color: darken(#f4f6f8, 10%);
+      }
+    }
+  }
+}
+.checkbox {
+  input {
+    display: none;
+  }
+  label {
+    &:hover {
+      background-color: #f2f2f2;
+      border-color: #f2f2f2;
+      svg {
+        display: block;
+        fill: #b2b2b2;
+      }
+    }
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border: 2px solid#E8E8E8;
+    border-radius: 30px;
+    svg {
+      display: none;
+    }
+  }
+  input:checked + label {
+    background-color: #4dd599;
+    border-color: #4dd599;
+    svg {
+      fill: #fff;
+      display: block;
+    }
+  }
+}
+.container {
+  &:not(:last-of-type) {
+    margin-bottom: 30px;
+  }
+}
