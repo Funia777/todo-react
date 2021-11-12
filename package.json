@@ -2,6 +2,10 @@
   "name": "todo-app",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": ">=0.12"
+  },
+  "engineStrict": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
