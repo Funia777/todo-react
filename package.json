@@ -30,8 +30,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "fake-json": "json-server ./src/assets/db.json --watch  --port 3001",
-    "heroku-postbuild": "npm install  && npm install -g json-server && npm run fake-json && npm run build && npm install -g serve && serve -s build"
+    "fake-json": "json-server ./src/assets/db.json --watch  --port 3001"
   },
   "eslintConfig": {
     "extends": [
