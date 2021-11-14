@@ -3,7 +3,7 @@ import axios from 'axios'
 
 import List from '../List/index'
 
-import addSvg from '/project/1/todo-app/src/assets/img/plus24.svg'
+import addSvg from '../../assets/img/plus24.svg'
 
 import Circle from '../Circle/index'
 
