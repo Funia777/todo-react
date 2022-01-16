@@ -88,6 +88,7 @@
     "server": "node server.js",
     "fake-json": "json-server ./src/assets/db.json --watch  --port 3001"
   },
+  "proxy": "http://localhost:3001",
   "eslintConfig": {
     "extends": [
       "react-app",
