@@ -1,12 +1,15 @@
-const express = require('express')
-const path = require('path')
-const app = express()
-const port = process.env.PORT || 8080
+const jsonServer = require('json-server')
+const server = jsonServer.create()
+const router = jsonServer.router('./src/assets/db.json')
+const middlewares = jsonServer.defaults({
+  static: './build',
+})
 
-app.use(express.static(path.join(__dirname, 'build')))
+const PORT = process.env.PORT || 3001
 
-app.get('/', (req, res) =>
-  res.sendFile(path.resolve(__dirname, 'build', 'index.html'))
-)
+server.use(middlewares)
+server.use(router)
 
-app.listen(port, () => console.log(`Server listening on port ${port}`))
+server.listen(PORT, () => {
+  console.log('Server is running')
+})
