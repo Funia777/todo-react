@@ -7,7 +7,7 @@
     },
     {
       "id": 2,
-      "name": "Фронтенд",
+      "name": "Саморазвитие",
       "colorId": 4
     },
     {
@@ -23,22 +23,58 @@
   ],
   "tasks": [
     {
-      "id": 2,
-      "listId": 2,
-      "text": "Изучить паттерны проектирования",
-      "completed": false
+      "listId": 1,
+      "text": "Куртка AI",
+      "completed": true,
+      "id": 1
     },
     {
-      "id": 3,
-      "listId": 2,
-      "text": "React Hooks (useState, useReducer, useEffects)",
-      "completed": false
+      "listId": 1,
+      "text": "Брюки",
+      "completed": true,
+      "id": 2
     },
     {
-      "id": 4,
+      "listId": 1,
+      "text": "Микрофон AKG",
+      "completed": true,
+      "id": 3
+    },
+    {
       "listId": 2,
-      "text": "Redux (redux-observable, redux-saga)",
-      "completed": false
+      "text": "Прочитать книгу",
+      "completed": true,
+      "id": 4
+    },
+    {
+      "listId": 2,
+      "text": "Пройти курс",
+      "completed": false,
+      "id": 5
+    },
+    {
+      "listId": 3,
+      "text": "Последний серафим",
+      "completed": true,
+      "id": 7
+    },
+    {
+      "listId": 3,
+      "text": "Эйфория",
+      "completed": false,
+      "id": 8
+    },
+    {
+      "listId": 4,
+      "text": "Девочка на шаре",
+      "completed": true,
+      "id": 9
+    },
+    {
+      "listId": 4,
+      "text": "Думай и богатей",
+      "completed": true,
+      "id": 10
     }
   ],
   "colors": [

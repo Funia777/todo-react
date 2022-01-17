@@ -12,7 +12,9 @@ function App() {
   const [activeItem, setActiveItem] = useState(null)
   const [href, setHref] = useState('')
   let navigate = useNavigate()
-
+  useEffect(() => {
+    navigate('/')
+  }, [])
   useEffect(() => {
     axios
       .get('http://localhost:3001/lists?_expand=color&_embed=tasks')
@@ -149,7 +151,6 @@ function App() {
       <div className="todo__tasks">
         <Routes>
           <Route
-            exact
             path="/"
             element={
               lists &&
@@ -166,6 +167,7 @@ function App() {
                 />
               ))
             }
+            exact
           ></Route>
 
           <Route
